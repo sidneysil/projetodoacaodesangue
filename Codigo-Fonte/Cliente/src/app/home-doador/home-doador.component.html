@@ -1,0 +1,103 @@
+<div align="right"><button (click)="sair()" style="background-color: crimson; color: wheat; border-radius: 55%;">Exit</button></div>
+
+<div class="card" style="background: white;">
+    <fieldset legend="Doadores Estatísticas">
+
+        <h3 style="text-align: center;">Candidatos por Estado</h3>
+        <div align="center">
+            <table class="verde">
+                <tr>
+                    <th *ngFor="let p of porEstado">{{ p.estado}}</th>
+                </tr>
+                <tr>
+
+                    <th *ngFor="let p of porEstado">{{ p.quantidadeCandidatos}}</th>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+        <br>
+
+        <h3 style="text-align: center;">Média IMC</h3>
+        <div align="center">
+            <table class="amarelo">
+
+                <tr>
+                    <th>0 a 10 anos</th>
+                    <th>11 a 20 anos</th>
+                    <th>21 a 30 anos</th>
+                    <th>31 a 40 anos</th>
+                    <th>41 a 50 anos</th>
+                    <th>51 a 60 anos</th>
+                    <th>61 a 70 anos</th>
+                </tr>
+                <tr>
+                    <th *ngFor="let i of imcList">{{ i }} </th>
+                </tr>
+
+            </table>
+        </div>
+
+        <br>
+        <br>
+
+        <h3 style="text-align: center;">Percentual Obesidade</h3>
+        <div align="center">
+            <table>
+                <tr>
+                    <th style="background-color: rgba(0, 132, 255, 0.514);">Homem</th>
+                    <th style="background-color: pink;">Mulher</th>
+                </tr>
+                <tr>
+                    <td *ngFor="let o of obesosList">{{ o }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+        <br>
+
+        <h3 style="text-align: center;">Média Idade</h3>
+        <div align="center">
+            <table class="roxo">
+                <tr>
+                    <td>A+</td>
+                    <td>A-</td>
+                    <td>B+</td>
+                    <td>B-</td>
+                    <td>AB+</td>
+                    <td>AB-</td>
+                    <td>O+</td>
+                    <td>O-</td>
+                </tr>
+                <tr>
+                    <td *ngFor="let m of mediaIdadeList">{{ m }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+        <br>
+
+        <h3 style="text-align: center;">Quantidade Doadores</h3>
+        <div align="center">
+            <table class="vermelho">
+                <tr>
+                    <td>A+</td>
+                    <td>A-</td>
+                    <td>B+</td>
+                    <td>B-</td>
+                    <td>AB+</td>
+                    <td>AB-</td>
+                    <td>O+</td>
+                    <td>O-</td>
+                </tr>
+                <tr>
+                    <td *ngFor="let q of quantidadeDoadoresList">{{ q }}</td>
+                </tr>
+            </table>
+        </div>
+
+    </fieldset>
+</div>
